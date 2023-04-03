@@ -1,13 +1,12 @@
-package zm.demo.controller;
+package zm.project.controller;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import zm.demo.service.AppUserService;
-import zm.util.ExcelUtil;
+import zm.project.service.AppUserService;
+import zm.util.ExcelUtils;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Arrays;
@@ -44,10 +43,10 @@ public class exportDataToExcel {
             }
             HashMap<String, List<Map<String, Object>>> map = new HashMap<String, List<Map<String, Object>>>(1);
             map.put("", result);
-            ExcelUtil.addDataToExcel(workbook, headerName, headerCode, map);
+            ExcelUtils.addDataToExcel(workbook, headerName, headerCode, map);
             pageNo++;
         }
         String fileName = "app_user" + ".xlsx";
-        ExcelUtil.outPutExcelToHttpResponse(request, response, workbook, fileName);
+        ExcelUtils.outPutExcelToHttpResponse(request, response, workbook, fileName);
     }
 }

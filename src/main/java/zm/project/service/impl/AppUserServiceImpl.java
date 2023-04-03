@@ -1,16 +1,14 @@
-package zm.demo.service.impl;
+package zm.project.service.impl;
 
 import cn.hutool.core.collection.CollectionUtil;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import zm.demo.entity.AppUser;
-import zm.demo.mapper.AppUserMapper;
-import zm.demo.service.AppUserService;
+import zm.project.entity.AppUser;
+import zm.project.mapper.AppUserMapper;
+import zm.project.service.AppUserService;
 import zm.util.BeanMapUtils;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

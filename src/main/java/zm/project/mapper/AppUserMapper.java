@@ -1,10 +1,9 @@
-package zm.demo.mapper;
+package zm.project.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
-import zm.demo.entity.AppUser;
+import zm.project.entity.AppUser;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

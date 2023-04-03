@@ -13,7 +13,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
 
-public class ExcelUtil {
+public class ExcelUtils {
     private static final Logger LOGGER = LoggerFactory.getLogger("cloudLogger");
     public static void addDataToExcel(Workbook workbook, List<String> tableHeadName,
                                       List<String> tableHeadCode, Map<String, List<Map<String, Object>>> data) {
